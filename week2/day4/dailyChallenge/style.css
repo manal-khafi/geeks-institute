@@ -1,0 +1,295 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #111111;
+    background-color: #f7f8fa;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 {
+    margin: 0;
+    font-weight: 600;
+}
+
+/* Header */
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 25px 40px;
+    background-color: #ffffff;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: -0.5px;
+    text-transform: lowercase;
+}
+
+.site-nav {
+    display: flex;
+    gap: 35px;
+}
+
+.site-nav a, .footer-nav a {
+    text-decoration: none;
+    color: #444444;
+    font-size: 14px;
+    transition: color 0.2s ease;
+}
+
+.site-nav a:hover, .footer-nav a:hover {
+    color: #ff2200;
+}
+
+.cart-link {
+    text-decoration: none;
+    color: #111111;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Main Content Wrapper */
+.main-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px 60px 40px;
+}
+
+/* Hero Section */
+.hero-section {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 60px;
+    margin-bottom: 40px;
+    gap: 40px;
+    border: 1px solid #eaeaea;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-label {
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #777777;
+    display: block;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.hero-text h1 {
+    font-size: 52px;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    letter-spacing: -1px;
+}
+
+.hero-text p {
+    font-size: 16px;
+    color: #555555;
+    margin-bottom: 30px;
+}
+
+/* Attribute selector to style the link pointing to the product section */
+a[href="#products"].shop-btn {
+    display: inline-block;
+    background-color: #ff2200;
+    color: #ffffff;
+    padding: 12px 24px;
+    border-radius: 24px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+}
+
+a[href="#products"].shop-btn:hover {
+    background-color: #e01e00;
+}
+
+.hero-image-container {
+    flex: 1;
+    height: 380px;
+    background-color: #edf0f5;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Product Section */
+.product-section {
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 50px;
+    border: 1px solid #eaeaea;
+}
+
+.product-section h2 {
+    font-size: 26px;
+    margin-bottom: 30px;
+    letter-spacing: -0.5px;
+}
+
+.products-grid {
+    display: flex;
+    gap: 25px;
+}
+
+/* Reusable class for product cards */
+.product-card {
+    flex: 1;
+    background-color: #f8f9fb;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid transparent;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease;
+}
+
+/* Combined selector to give one featured product a distinct border */
+.product-card.featured-product {
+    border: 1px solid #d0d7de;
+}
+
+/* :nth-child(2) to give the middle card a different background */
+.product-card:nth-child(2) {
+    background-color: #f3f0ea;
+}
+
+.product-image-box {
+    width: 100%;
+    height: 220px;
+    background-color: #edf0f5;
+    overflow: hidden;
+}
+
+.product-card:nth-child(2) .product-image-box {
+    background-color: #e6e2db;
+}
+
+.product-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.product-info {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.product-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.product-name {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.product-price {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+/* Direct-child selector to style product descriptions */
+.product-info > p.product-desc {
+    font-size: 13px;
+    color: #666666;
+    margin: 0 0 20px 0;
+    flex-grow: 1;
+}
+
+.cart-btn {
+    background-color: #ff2200;
+    color: #ffffff;
+    border: none;
+    padding: 10px 0;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.2s ease;
+}
+
+.cart-btn:hover {
+    background-color: #e01e00;
+}
+
+/* Footer */
+.site-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 40px auto 0 auto;
+    padding: 30px 40px;
+    background-color: #ffffff;
+    border-radius: 16px;
+    border: 1px solid #eaeaea;
+}
+
+.footer-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-logo {
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: lowercase;
+}
+
+.footer-divider {
+    color: #cccccc;
+}
+
+.footer-tagline {
+    font-size: 13px;
+    color: #666666;
+}
+
+.footer-nav {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 12px;
+    margin-left: 10px;
+}
+
+.social-icons a {
+    font-size: 11px;
+    font-weight: bold;
+    color: #444444;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #ff2200;
+}
