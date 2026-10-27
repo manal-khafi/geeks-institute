@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moroccan Heritage Vault</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="app-header">
+    <div class="header-container">
+      <div class="brand">
+        <span class="logo-icon">🏛️</span>
+        <h1>Moroccan Heritage Vault</h1>
+      </div>
+      
+      <div class="search-wrapper">
+        <input 
+          type="search" 
+          id="search-input" 
+          placeholder="Search landmarks, historical events..." 
+          aria-label="Search catalog"
+        >
+      </div>
+
+      <div class="header-actions">
+        <button id="theme-toggle" class="btn-icon" aria-label="Toggle light or dark theme">🌙</button>
+        <button id="open-add-modal" class="btn btn-primary">+ Add Landmark</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Controls Section -->
+  <section class="controls-container">
+    <div class="category-filters" id="category-filters">
+      <button class="filter-btn active" data-category="All">All Items</button>
+      <button class="filter-btn" data-category="Religious & Sacred">Religious & Sacred</button>
+      <button class="filter-btn" data-category="Archaeological Sites">Archaeological Sites</button>
+      <button class="filter-btn" data-category="Fortress & Ksar">Fortress & Ksar</button>
+      <button class="filter-btn" data-category="Palaces & Royal">Palaces & Royal</button>
+      <button class="filter-btn" data-category="Favorites">❤️ Favorites</button>
+    </div>
+
+    <div class="sorting-controls">
+      <label for="sort-select">Sort By:</label>
+      <select id="sort-select">
+        <option value="default">Featured</option>
+        <option value="title-asc">Title (A – Z)</option>
+        <option value="title-desc">Title (Z – A)</option>
+      </select>
+    </div>
+  </section>
+
+  <!-- Main Showcase Grid -->
+  <main class="main-content">
+    <div id="cards-grid" class="cards-grid"></div>
+
+    <!-- Empty State Container -->
+    <div id="empty-state" class="empty-state hidden">
+      <div class="empty-icon">🔍</div>
+      <h3>No Landmarks Found</h3>
+      <p>We couldn't find anything matching your search or filter criteria. Try adjusting your search query.</p>
+    </div>
+  </main>
+
+  <!-- Detail Modal -->
+  <dialog id="detail-modal" class="modal">
+    <div class="modal-content">
+      <button class="modal-close" id="modal-close" aria-label="Close modal">&times;</button>
+      <img id="modal-image" src="" alt="" class="modal-image">
+      <div class="modal-body">
+        <span id="modal-category" class="badge"></span>
+        <h2 id="modal-title"></h2>
+        <p id="modal-metric" class="metric-highlight"></p>
+        <hr>
+        <p id="modal-details"></p>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Add Item Modal Form -->
+  <dialog id="add-modal" class="modal">
+    <div class="modal-content form-modal">
+      <button class="modal-close" id="add-modal-close" aria-label="Close modal">&times;</button>
+      <h2>Add New Landmark</h2>
+      <form id="add-item-form">
+        <div class="form-group">
+          <label for="item-title">Title *</label>
+          <input type="text" id="item-title" required placeholder="e.g. Oukaimeden Rock Carvings">
+        </div>
+
+        <div class="form-group">
+          <label for="item-category">Category *</label>
+          <select id="item-category" required>
+            <option value="">Select Category</option>
+            <option value="Religious & Sacred">Religious & Sacred</option>
+            <option value="Archaeological Sites">Archaeological Sites</option>
+            <option value="Fortress & Ksar">Fortress & Ksar</option>
+            <option value="Palaces & Royal">Palaces & Royal</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="item-image">Image URL *</label>
+          <input type="url" id="item-image" required placeholder="https://images.unsplash.com/...">
+        </div>
+
+        <div class="form-group">
+          <label for="item-metric">Key Metric/Badge *</label>
+          <input type="text" id="item-metric" required placeholder="e.g. 1200m Altitude / 10th Century">
+        </div>
+
+        <div class="form-group">
+          <label for="item-short">Short Description *</label>
+          <textarea id="item-short" required rows="2" placeholder="Brief summary (1-2 sentences)..."></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="item-full">Full Details *</label>
+          <textarea id="item-full" required rows="4" placeholder="Detailed history or description..."></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-full">Save Landmark</button>
+      </form>
+    </div>
+  </dialog>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
