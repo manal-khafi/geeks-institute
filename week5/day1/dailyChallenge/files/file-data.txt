@@ -1,0 +1,2 @@
+This is the content inside files/file-data.txt.
+Node.js fs and path modules make reading files clean and reliable.

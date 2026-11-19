@@ -1,0 +1,2 @@
+Hello from source.txt!
+This file is used to test copying content into destination.txt using Node.js fs.
