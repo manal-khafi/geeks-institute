@@ -1,0 +1,177 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  background: #0f172a;
+  color: #f8fafc;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 1.5rem;
+}
+
+.container {
+  width: 100%;
+  max-width: 640px;
+}
+
+.top-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.top-bar h1 {
+  font-size: 1.5rem;
+}
+
+.stats {
+  display: flex;
+  gap: 0.6rem;
+  font-size: 0.9rem;
+}
+
+.stats span {
+  background: #1e293b;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  border: 1px solid #334155;
+}
+
+.card {
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  padding: 1.75rem;
+}
+
+.card h2 {
+  font-size: 1.25rem;
+  line-height: 1.45;
+  margin-bottom: 1.25rem;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.option-label {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: #0f172a;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  padding: 0.85rem 1rem;
+  cursor: pointer;
+  transition: border-color 0.15s ease;
+}
+
+.option-label:hover {
+  border-color: #38bdf8;
+}
+
+.actions {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+button {
+  background: #0284c7;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.7rem 1.2rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:hover:not(:disabled) {
+  background: #0369a1;
+}
+
+button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+button.secondary {
+  background: #334155;
+}
+
+button.secondary:hover:not(:disabled) {
+  background: #475569;
+}
+
+.feedback {
+  margin-top: 1.25rem;
+  padding: 0.9rem 1rem;
+  border-radius: 8px;
+  line-height: 1.45;
+}
+
+.feedback.correct {
+  background: rgba(22, 163, 74, 0.18);
+  border: 1px solid #22c55e;
+  color: #bbf7d0;
+}
+
+.feedback.incorrect {
+  background: rgba(220, 38, 38, 0.18);
+  border: 1px solid #ef4444;
+  color: #fecaca;
+}
+
+.final-score {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #38bdf8;
+  margin-bottom: 0.4rem;
+}
+
+.save-score {
+  display: flex;
+  gap: 0.6rem;
+  margin-top: 1.25rem;
+}
+
+.save-score input {
+  flex: 1;
+  padding: 0.65rem 0.85rem;
+  border-radius: 8px;
+  border: 1px solid #475569;
+  background: #0f172a;
+  color: #f8fafc;
+}
+
+.leaderboard-box {
+  margin: 1.5rem 0;
+}
+
+.leaderboard-box h3 {
+  font-size: 1rem;
+  margin-bottom: 0.6rem;
+}
+
+#leaderboard-list {
+  padding-left: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  color: #cbd5e1;
+}
+
+.hidden {
+  display: none;
+}

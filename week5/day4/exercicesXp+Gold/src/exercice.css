@@ -1,0 +1,30 @@
+.para {
+  background-color: #282c34;
+  color: white;
+  padding: 40px;
+  font-family: Arial;
+  text-align: center;
+}
+
+.exercise-box {
+  margin-top: 24px;
+  padding: 16px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  background-color: #ffffff;
+}
+
+.exercise-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 320px;
+  margin: 16px 0;
+}
+
+.exercise-image {
+  display: block;
+  width: 120px;
+  height: auto;
+  margin: 12px 0;
+}

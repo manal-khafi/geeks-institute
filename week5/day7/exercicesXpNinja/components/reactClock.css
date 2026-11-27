@@ -1,0 +1,102 @@
+.compass-scene {
+  min-height: 100vh;
+  background-color: #f3f4f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.compass-board {
+  position: relative;
+  width: 100%;
+  max-width: 960px;
+  height: 500px;
+  background-color: #252930;
+  border-radius: 12px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+}
+
+.top-left-year {
+  position: absolute;
+  top: 24px;
+  left: 28px;
+  z-index: 10;
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+}
+
+.year-number {
+  font-size: 1.65rem;
+  font-weight: 500;
+  color: #f9fafb;
+}
+
+.year-label {
+  font-size: 0.9rem;
+  color: #9ca3af;
+}
+
+.bottom-right-month {
+  position: absolute;
+  bottom: 22px;
+  right: 30px;
+  z-index: 10;
+  font-size: 1.65rem;
+  font-weight: 500;
+  color: #f9fafb;
+}
+
+.compass-wheel {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+}
+
+.linear-readout-line {
+  position: absolute;
+  top: -13px;
+  left: 24px;
+  width: 350px;
+  height: 26px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.05);
+  pointer-events: none;
+}
+
+.compass-ring {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.compass-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  white-space: nowrap;
+  font-size: 0.78rem;
+  color: rgba(229, 231, 235, 0.32);
+  transition: color 0.3s ease, transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.compass-item.is-current {
+  color: #ffffff;
+  font-weight: 600;
+  animation: pulseActive 1s ease-in-out infinite;
+}
+
+@keyframes pulseActive {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.78;
+  }
+}
